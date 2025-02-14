@@ -8,9 +8,9 @@ export function batchInvoke(functions: Nullable<Fn>[]) {
 }
 
 /**
- * Call the function
+ * Call the function, returning the result
  */
-export function invoke(fn: Fn) {
+export function invoke<T>(fn: () => T): T {
   return fn()
 }
 
